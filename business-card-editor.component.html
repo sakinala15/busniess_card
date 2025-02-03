@@ -1,0 +1,61 @@
+<div id="container">
+  <div id="card1" #card1 class="business-card">
+    <div id="contactInfo">
+      <!-- Business card content goes here -->
+      <img id="profileImg" src="/placeholder.svg" alt="Profile Image" class="draggable editable">
+    </div>
+  </div>
+
+  <div id="contextMenu" #contextMenu class="context-menu">
+    <select id="fontFamily">
+      <option value="Arial">Arial</option>
+      <option value="Helvetica">Helvetica</option>
+      <option value="Times New Roman">Times New Roman</option>
+    </select>
+    <input type="number" id="fontSize" min="8" max="72" value="16">
+    <input type="color" id="textColor">
+    <button (click)="applyFont()">Apply Font</button>
+    <button (click)="toggleBold()">Bold</button>
+    <button (click)="toggleItalic()">Italic</button>
+    <button (click)="toggleUnderline()">Underline</button>
+    <button (click)="removeElement()">Remove Element</button>
+  </div>
+
+  <div id="resizeMenu" #resizeMenu class="resize-menu">
+    <input type="number" id="cardWidth" placeholder="Width">
+    <input type="number" id="cardHeight" placeholder="Height">
+    <button (click)="resizeCard()">Resize Card</button>
+  </div>
+
+  <div class="controls">
+    <input type="text" id="inputText" placeholder="Enter text">
+    <button id="addTextButton">Add Text</button>
+    <button id="addFacebook">Add Facebook</button>
+    <button id="addTwitter">Add Twitter</button>
+    <button id="addLinkedIn">Add LinkedIn</button>
+    <button id="addInstagram">Add Instagram</button>
+    <button id="addHorizontalLine">Add Horizontal Line</button>
+    <button id="addVerticalLine">Add Vertical Line</button>
+    <select id="themeSelector">
+      <option value="">Select Theme</option>
+      <option value="theme-default">Default</option>
+      <option value="theme-dark">Dark</option>
+      <option value="theme-corporate">Corporate</option>
+      <!-- Add more theme options here -->
+    </select>
+    <input type="color" id="customBgColor" placeholder="Background Color">
+    <input type="color" id="customTextColor" placeholder="Text Color">
+    <button id="applyCustomTheme">Apply Custom Theme</button>
+    <button id="downloadBtn">Download Card</button>
+    <button id="generateQRCodeBtn">Generate QR Code</button>
+    <button id="resetBtn">Reset</button>
+  </div>
+</div>
+
+<div id="qrCodeModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div id="qrCodeContainer"></div>
+  </div>
+</div>
+
